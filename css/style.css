@@ -539,6 +539,11 @@ input[name="slide"] { display: none; } /* Hide radio buttons */
 /* Certificatesss 
 
 /* Grid Layout */
+
+.badge-icon {
+  width: 20px;
+  height: 20px;
+}
 .certificate-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
