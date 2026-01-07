@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Import Inter font from Google Fonts */
+
+/* =========================================
+   1. Global Styles & Reset
+   ========================================= */
+* {
+  margin: 0; /* Remove default margin from all elements */
+  padding: 0; /* Remove default padding from all elements */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: 'Inter', sans-serif; /* Apply Inter font globally */
+}
+
+a {
+  text-decoration: none; /* Remove underlines from links */
+  color: inherit; /* Inherit text color from parent elements */
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for the entire document */
+}
+
+body {
+  background: #0f0f0f; /* Set the main dark background color */
+  color: #e5e5e5; /* Set the primary light text color */
+}
+
+/* =========================================
+   2. Main Layout
+   ========================================= */
+.container {
+  max-width: 900px; /* Limit content width for readability */
+  margin: auto; /* Center the container horizontally */
+  padding: 30px 20px; /* Add spacing inside the container */
+}
+
+/* =========================================
+   3. Header Section
+   ========================================= */
+.header {
+  display: flex; /* Use Flexbox for header layout */
+  align-items: center; /* Vertically align items in the center */
+  gap: 20px; /* Space between header elements */
+  padding-left: 15px; /* Add left padding */
+  margin-top: 25px; /* Space above the header */
+  margin-bottom: 25px; /* Space below the header */
+}
+
+.profile-info {
+  display: flex; /* Use Flexbox for profile info */
+  flex-direction: column; /* Stack name on top of location/occupation */
+  gap: 5px; /* Small space between stacked items */
+}
+.name-container {
+  display: flex; /* Use Flexbox for the name line */
+  align-items: center; /* Vertically align name and badge */
+  gap: 6px; /* Space between name and badge */
+  margin-top: 0; /* Remove top margin */
+}
+.header .profile-info .badge {
+  display: flex; /* Use Flexbox for the badge */
+  flex-direction: column; /* Stack content inside badge (if any) */
+  width: 17px; /* Set fixed width for badge */
+  height: 17px; /* Set fixed height for badge */
+  margin-left: 4px; /* Space to the left of the badge */
+}
+.occupation{
+  display: flex; /* Use Flexbox for occupation line */
+  align-items: center; /* Vertically center icon and text */
+  gap: 3px; /* Space between icon and text */
+  color: #ccc; /* Dimmer text color for hierarchy */
+  font-size: 0.8rem; /* Smaller font size */
+  margin-top: 20px; /* Space above occupation */
+}
+.location {
+  display: flex; /* Use Flexbox for location line */
+  align-items: center; /* Vertically center icon and text */
+  gap: 3px; /* Space between icon and text */
+  color: #ccc; /* Dimmer text color */
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+.icon {
+  width: 16px; /* Set icon width */
+  height: 16px; /* Set icon height */
+}
+
+
+
+.avatar {
+  width: 150px; /* Set width of the avatar container */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space to the right */
+  margin-left: -15px; /* Negative margin to pull it left */
+}
+
+
+  
+.icon {
+  width: 15px; /* Override icon width */
+  opacity: 80; /* Set opacity (Note: 80 is invalid, likely meant 0.8) */
+}
+
+.avatar img {
+  border-radius: 50%; /* Make the avatar image circular */
+}
+
+.header h1 {
+  font-size: 1.8rem; /* Set large font size for name */
+  line-height: 1.5; /* Set line height for readability */
+}
+
+.header p {
+  color: #aaa; /* Set paragraph text color to light gray */
+}
+
+.banner-card {
+  width: 180px; /* Set fixed width for banner card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Clip content to rounded corners */
+  border: 2px solid #8b5cf6; /* Neon violet border */
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); /* Neon glow effect */
+  margin-left: 0px; /* Push to the right in a flex container */
+  align-self: center ; /* Align to top of flex container */
+  transition: 0.3s; /* Smooth transition for hover effects */
+
+
+}
+
+.banner-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6); /* Intensify glow on hover */
+}
+
+.banner-img {
+  width: 100%; /* Fill the card width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom spacing of inline images */
+}
+
+.creatives-logo {
+  width: 100%; /* Fill the card width */
+  height: 40px; /* Maintain aspect ratio */
+  display: block; /* Remove bottom spacing of inline images */
+  object-fit: cover ;
+}
+
+.tbi {
+   width: 100%; /* Fill the card width */
+  height: 40px; /* Maintain aspect ratio */
+  display: block; /* Remove bottom spacing of inline images */
+}
+
+.banner-container {
+  margin-top: 19px;
+  gap: 10px;
+  display: grid;
+  margin-left: 30px;
+}
+
+/* =========================================
+   4. Buttons & Action Links
+   ========================================= */
+.actions {
+  display: flex; /* Use Flexbox for buttons */
+  gap: 12px; /* Space between buttons */
+  margin-top: 24px; /* Space above the button group */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+.btn {
+  text-decoration: none; /* Remove underline */
+  font-style: bold; /* Note: 'bold' is not valid for font-style, usually font-weight */
+  padding: 6px 30px; /* Vertical and horizontal padding */
+  border-radius: 12px; /* Rounded corners */
+  font-family: 'Inter', sans-serif; /* Ensure font consistency */
+  font-weight: 530; /* Set specific font weight */
+  font-size: 14px; /* Set text size */
+  display: flex; /* Use Flexbox for content alignment */
+  align-items: center; /* Center content vertically */
+  transition: 0.2s; /* Smooth hover transition */
+}
+
+.btn:hover {
+  transform: translateY(-3px); /* Move button up slightly on hover */
+}
+
+/* White background button (Facebook/Schedule) */
+.btn-white {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+}
+
+/* Outlined button (Email/GitHub) */
+.btn-outline {
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #333; /* Dark grey border */
+  color: white; /* White text */
+}
+
+.btn-outline:hover {
+  background-color: #1a1a1a; /* Darken background on hover */
+  border-color: #555; /* Lighten border on hover */
+}
+
+/* Icon Spacing */
+.btn-content {
+  display: flex; /* Use Flexbox inside button */
+  align-items: center; /* Center items vertically */
+  gap: 8px; /* Space between icon and text */
+  width: 100%; /* Fill button width */
+}
+
+.btn-icon {
+  width: 18px; /* Set icon width */
+  height: 18px; /* Set icon height */
+}
+
+.arrow {
+  margin-left: auto; /* Push arrow to the far right */
+  width: 14px; /* Set arrow width */
+  opacity: 0.6; /* Make arrow slightly transparent */
+}
+
+/* =========================================
+   5. Content Cards (About, Experience, Projects)
+   ========================================= */
+.card {
+  background: #161616; /* Dark card background */
+  border: 1px solid #242424; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  margin-bottom: 20px; /* Space below card */
+}
+
+.card-header {
+  display: flex; /* Use Flexbox for header */
+  align-items: center; /* Center icon and title */
+  gap: 8px; /* Space between icon and title */
+  margin-bottom: 20px; /* Space below header */
+}
+
+.card-icon {
+  margin-top: 0px; /* Remove top margin */
+  width: 20px; /* Set icon width */
+  height: 26px; /* Set icon height */
+  opacity: 0.8; /* Slight transparency */
+}
+
+.lab-icon {
+  margin-top: 0px; /* Remove top margin */
+  margin-right:-10px; /* Pull content closer to the right */
+  width: 40px; /* Set wider icon width */
+  height: 26px; /* Set icon height */
+  opacity: 0.8; /* Slight transparency */
+}
+
+.card h2 {
+  font-size: 1.2rem; /* Set heading size */
+}
+.card p {
+  line-height: 25px; /* Set line height for text block */
+  font-size: 0.8rem; /* Set text size */
+  text-align: justify; /* Justify text alignment */
+  margin-bottom: 10px; /* Space below paragraph */
+}
+/* The Parent Container */
+.projects-grid {
+  display: grid; /* Use Grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  gap: 16px; /* Space between grid items */
+  margin-top: 20px; /* Space above grid */
+  margin-bottom: 20px; /* Space below grid */
+}
+.projects-container {
+  display: grid; /* Use Grid layout */
+  grid-template-columns: 1fr 1fr; /* Create two equal columns */
+  gap: 20px; /* Space between items */
+  margin-top: 20px; /* Space above container */
+}
+
+.projects {
+  background: #161616; /* Dark background for project card */
+  border: 1px solid #333; /* Subtle border */
+  padding: 5px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  display: flex; /* Use Flexbox for internal layout */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space out content */
+}
+.projects h3{
+  font-size: 0.8rem; /* Set title size */
+  margin-bottom: 8px ; /* Space below title */
+  text-align: left; /* Align text to left */
+}
+.projects p {
+  font-size: 0.7rem; /* Set description size */
+  line-height: 15px; /* Set line height */
+  text-align: justify; /* Justify text */
+}
+
+.projects-grid .projects:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  box-shadow: 0 0 25px rgba(43, 37, 59, 0.6); /* Add shadow on hover */
+}
+
+
+.row-container {
+  display: flex; /* Use Flexbox for row layout */
+  gap: 20px; /* Space between items */
+  margin-bottom: 20px; /* Space below row */
+}
+
+.row-container .card {
+  flex: 1; /* Allow cards to grow and take equal width */
+  margin-bottom: 0; /* Remove bottom margin inside row */
+}
+
+@media (max-width: 768px) {
+  .row-container {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+}
+
+/* =========================================
+   6. Tech Stack Section
+   ========================================= */
+.tech-group {
+  margin-bottom: 20px; /* Space below tech group */
+}
+
+.tech-group h3 {
+  font-size: .85rem; /* Set heading size */
+  margin-bottom: 8px; /* Space below heading */
+  margin-top: -10px; /* Pull heading up slightly */
+  color: #ffffff; /* White text color */
+  font-family: 'Inter'; /* Ensure font family */
+}
+
+.tech-list {
+  display: flex; /* Use Flexbox for list */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 8px; /* Space between items */
+  font-family: 'Inter'; /* Ensure font family */
+  font-size: 0.7rem; /* Set font size */
+}
+
+.tech-list span {
+  background: #161616; /* Dark background */
+  border: 1px solid #333; /* Fallback border */
+  border: 1px solid #ffffff; /* White border override */
+  border-radius: 8px; /* Rounded corners */
+  padding: 4px 20px; /* Inner spacing */
+  color: #ffffff; /* White text */
+  display: inline-block; /* Treat as inline-block */
+  font-weight: 500; /* Medium font weight */
+  transition: 0.2s ease; /* Smooth transition */
+}
+
+/* Optional: Add a subtle hover effect like the example */
+.tech-list span:hover {
+  background: #222; /* Lighten background on hover */
+  border-color: #555; /* Darken border on hover */
+}
+
+
+/* ========================================
+   7. experience  
+   ========================================= */
+
+
+/* Container for the 60/40 split */
+.split-row {
+  display: grid; /* Use Grid layout */
+  grid-template-columns: 40% 58%; /* Define column widths */
+  gap: 20px; /* Space between columns */
+  align-items: start; /* Align items to top */
+}
+
+.experience-section {
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  max-height: 280px; /* Limit height */
+}
+
+/* The magic for scrolling */
+.scroll-container {
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  padding-right: 10px; /* Space for scrollbar */
+  position: relative; /* Context for absolute positioning */
+}
+
+/* Custom Scrollbar for a cleaner look */
+.scroll-container::-webkit-scrollbar {
+  width: 5px; /* Set scrollbar width */
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #333; /* Set scrollbar thumb color */
+  border-radius: 10px; /* Round scrollbar thumb */
+}
+
+/* Timeline Line Positioning inside the scroll area */
+.experience-timeline {
+  position: relative; /* Context for the timeline line */
+  padding-left: 10px; /* Indent content */
+  margin-top: 10px; /* Space above timeline */
+}
+
+.experience-timeline::before {
+  content: ""; /* Create pseudo-element */
+  position: absolute; /* Position absolutely relative to timeline */
+  left: 36px; /* Horizontal position of the line */
+  top: 10px; /* Start point */
+  bottom: 25px; /* End point */
+  width: 2px; /* Line thickness */
+  background: #333; /* Line color */
+  z-index: 0; /* Place behind content */
+}
+
+.experience-item {
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between year and details */
+  margin-bottom: 20px; /* Space below item */
+  position: relative; /* Context for stacking */
+  z-index: 1; /* Place above the timeline line */
+}
+
+
+.year-badge {
+  background: #0f0f0f; /* Background color (matches body to hide line) */
+  border: 1px solid #ffffff; /* White border */
+  padding: 4px 12px; /* Inner spacing */
+  border-radius: 50px; /* Pill shape */
+  font-size: 0.8rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  color: white; /* White text */
+  min-width: 55px; /* Minimum width */
+  text-align: center; /* Center text */
+}
+.experience-section {
+  position: relative; /* Context for fade effect */
+}
+
+.experience-section::after {
+  content: ""; /* Create pseudo-element */
+  position: absolute; /* Position at bottom */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 40px; /* Height of fade */
+  background: linear-gradient(transparent, #0f0f0f); /* Fade to background color */
+  pointer-events: none; /* Allow clicks to pass through */
+  border-radius: 0 0 24px 24px; /* Match card border radius */
+}
+
+
+/* =========================================
+   8. Gallery
+   ========================================= */
+
+   .gallery-card {
+  overflow: hidden; /* Hide overflow content */
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack content */
+}
+
+.slider-wrapper {
+  width: 100%; /* Full width */
+  height: 180px; /* Fixed height for slider */
+  margin-top: 15px; /* Space above slider */
+  position: relative; /* Context for absolute positioning */
+}
+
+.slider {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Hide slides outside view */
+  border-radius: 12px; /* Rounded corners */
+}
+
+.slides {
+  width: 600%; /* Width for 6 slides (100% * 6) */
+  height: 100%; /* Full height */
+  display: flex; /* Arrange slides horizontally */
+  transition: 0.6s ease-in-out; /* Smooth slide transition */
+}
+
+.slide {
+  width: 16.66%; /* Width of one slide (100% / 6) */
+  transition: 0.6s; /* Transition effect */
+}
+
+.slide img {
+  width: 100%; /* Fill slide width */
+  height: 100%; /* Fill slide height */
+  object-fit: cover; /* Crop image to fill container */
+}
+
+/* Control Logic */
+input[name="slide"] { display: none; } /* Hide radio buttons */
+
+#img1:checked ~ .slides { margin-left: 0; } /* Show slide 1 */
+#img2:checked ~ .slides { margin-left: -100%; } /* Show slide 2 */
+#img3:checked ~ .slides { margin-left: -200%; } /* Show slide 3 */
+#img4:checked ~ .slides { margin-left: -300%; } /* Show slide 4 */
+#img5:checked ~ .slides { margin-left: -400%; } /* Show slide 5 */
+#img6:checked ~ .slides { margin-left: -500%; } /* Show slide 6 */
+
+/* Navigation Styling */
+.navigation {
+  position: absolute; /* Position over the slider */
+  bottom: 10px; /* Distance from bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  display: flex; /* Arrange dots horizontally */
+  gap: 10px; /* Space between dots */
+}
+
+.bar {
+  width: 12px; /* Dot width */
+  height: 12px; /* Dot height */
+  border: 2px solid #fff; /* White border */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: 0.4s; /* Smooth transition */
+}
+
+.bar:hover, #img1:checked ~ .navigation label[for="img1"],
+#img2:checked ~ .navigation label[for="img2"],
+#img3:checked ~ .navigation label[for="img3"],
+#img4:checked ~ .navigation label[for="img4"],
+#img5:checked ~ .navigation label[for="img5"],
+#img6:checked ~ .navigation label[for="img6"] {
+  background: #fff; /* Fill dot when active or hovered */
+}
+
+/* Certificatesss 
+
+/* Grid Layout */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Individual Item Container */
+.cert-item {
+  position: relative;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden; /* Clips image to corners */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.cert-item:hover {
+  transform: translateY(-5px); /* Pops up slightly on hover */
+}
+
+/* Make image fill the border */
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This fills the border perfectly without stretching */
+  filter: grayscale(20%); /* Optional: subtle professional look */
+}
+
+/* Title Overlay on Hover */
+.cert-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 100));
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cert-item:hover .cert-overlay {
+  opacity: 10;
+}
+
+/* The background overlay */
+.modal {
+  display: none; 
+  position: fixed;     /* This is the most important line */
+  z-index: 9999;       /* Ensures it is on top of every other card */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  align-items: center;
+  justify-content: center;
+}
+
+/* The actual image inside the popup */
+.modal-content {
+  max-width: 90%;
+  max-height: 50vh;    /* Limits height so it doesn't scroll forever */
+  margin: auto;
+  display: block;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* =========================================
+   9. Footer
+   ========================================= */ 
+/* Minimal Footer Styling */
+.footer-minimal {
+  width: 100%; /* Full width */
+  margin-top: 60px; /* Space above the footer */
+  padding-bottom: 40px; /* Space at the very bottom of page */
+  text-align: center; /* Center align text */
+}
+
+.footer-line {
+  width: 100%; /* Full width */
+  height: 1px; /* Line thickness */
+  background-color: #333; /* Dark gray line color */
+  margin-bottom: 25px; /* Space below line */
+}
+
+.footer-minimal p {
+  color: #ffffff; /* White text */
+  font-size: 0.9rem; /* Font size */
+  font-family: 'Inter', sans-serif; /* Font family */
+  letter-spacing: 0.5px; /* Letter spacing */
+}
+
+
+/* Mobile Responsiveness: Stack them at 100% width on phones */
+@media (max-width: 900px) {
+  .split-row {
+    grid-template-columns: 1fr; /* Switch to single column layout */
+  }
+}
