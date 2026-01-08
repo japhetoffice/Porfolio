@@ -76,7 +76,7 @@ body {
 }
 .location {
   display: flex; /* Use Flexbox for location line */
-  align-items: center; /* Vertically center icon and text */
+  align-items: center; /* Vertically center icon and text */ 
   gap: 3px; /* Space between icon and text */
   color: #ccc; /* Dimmer text color */
   font-size: 0.8rem; /* Smaller font size */
@@ -103,9 +103,6 @@ body {
   opacity: 80; /* Set opacity (Note: 80 is invalid, likely meant 0.8) */
 }
 
-.avatar img {
-  border-radius: 50%; /* Make the avatar image circular */
-}
 
 .header h1 {
   font-size: 1.8rem; /* Set large font size for name */
