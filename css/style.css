@@ -264,6 +264,7 @@ body {
   font-size: 0.8rem; /* Set text size */
   text-align: justify; /* Justify text alignment */
   margin-bottom: 10px; /* Space below paragraph */
+
 }
 /* The Parent Container */
 .projects-grid {
@@ -394,7 +395,7 @@ body {
 
 /* Custom Scrollbar for a cleaner look */
 .scroll-container::-webkit-scrollbar {
-  width: 5px; /* Set scrollbar width */
+  width: 0px; /* Set scrollbar width */
 }
 .scroll-container::-webkit-scrollbar-thumb {
   background: #333; /* Set scrollbar thumb color */
