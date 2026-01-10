@@ -352,7 +352,7 @@ body {
   background: #161616; /* Dark background */
   border: 1px solid #333; /* Fallback border */
   border: 1px solid #ffffff; /* White border override */
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 12px; /* Rounded corners */
   padding: 4px 20px; /* Inner spacing */
   color: #ffffff; /* White text */
   display: inline-block; /* Treat as inline-block */
