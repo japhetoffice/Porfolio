@@ -323,6 +323,40 @@ body {
   .row-container {
     flex-direction: column; /* Stack items vertically on mobile */
   }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .profile-info {
+    align-items: center;
+    width: 100%;
+  }
+
+  .name-container {
+    justify-content: center;
+  }
+
+  .avatar {
+    margin: 0 auto 15px auto;
+  }
+
+  .banner-container {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .projects-grid, .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    justify-content: center;
+  }
 }
 
 /* =========================================
