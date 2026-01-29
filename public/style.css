@@ -100,7 +100,7 @@ body {
   
 .icon {
   width: 15px; /* Override icon width */
-  opacity: 80; /* Set opacity (Note: 80 is invalid, likely meant 0.8) */
+  opacity: 0.8; /* Set opacity (Note: 80 is invalid, likely meant 0.8) */
 }
 
 
@@ -171,7 +171,7 @@ body {
 
 .btn {
   text-decoration: none; /* Remove underline */
-  font-style: bold; /* Note: 'bold' is not valid for font-style, usually font-weight */
+  font-weight: bold; /* Note: 'bold' is not valid for font-style, usually font-weight */
   padding: 6px 30px; /* Vertical and horizontal padding */
   border-radius: 12px; /* Rounded corners */
   font-family: 'Inter', sans-serif; /* Ensure font consistency */
